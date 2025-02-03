@@ -1,0 +1,16 @@
+# Игнорировать node_modules везде
+**/node_modules/
+
+# Игнорировать логи и временные файлы
+logs/
+*.log
+.env
+
+# Игнорировать системные файлы
+.DS_Store
+
+# Для проектов на Node.js
+package-lock.json
+
+# Если используете IDE (например, VS Code)
+.vscode/
