@@ -1,6 +1,29 @@
 .catalog {
     padding-top: 100px;
     padding-bottom: 100px;
+    background-color: var(--white);
+
+    &__wrapper {
+        background-color: var(--gray);
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &__button {
+        font-size: 1.25rem; //20px
+        border: none;
+        border-radius: 30px;
+        height: 89px;
+        font-weight: 700;
+        padding-inline: 53px;
+        background-color: var(--card-bg-color);
+        cursor: pointer;
+    }
 
     &__title {
         font-size: 2.8125rem;
