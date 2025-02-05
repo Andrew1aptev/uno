@@ -1,0 +1,42 @@
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        flex-grow: 1;
+        margin-right: 20px;
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+
+    &__nav-link {
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: var(--black);
+        /*20px*/
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        padding: 0;
+    }
+}

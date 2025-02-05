@@ -1,0 +1,24 @@
+:root {
+  //container
+  --container-max-width: 1200px;
+  --container-padding-inline: 15px;
+
+  //------------------------------------
+  // card
+  --card-bg-color: #D9D9D9;
+  --card-title-color: #000000;
+  --card-text-color: gray;
+  --card-price-color: #000000;
+  //
+  --card-button-color: #ffffff;
+  --card-button-hover-color: orange;
+  //
+  --card-button-bg-color: #7B7676;
+  --card-button-bg-hover-color: blue;
+  //-------------------------------------
+
+  //all
+  --black: #000000;
+  --gray: #7B7676;
+  --white: #ffffff;
+}
