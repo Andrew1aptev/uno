@@ -1,0 +1,112 @@
+.hero {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    background-color: var(--hero-bg);
+    color: #000000;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__decoration {
+        background-image: url("../images/hero/pizza.svg");
+        width: 100%;
+        min-height: 500px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        max-width: 500px;
+        /* Анимация */
+        animation: rotatePizza 25s linear infinite;
+        transform-origin: center;
+        /* Точка вращения */
+    }
+
+    @keyframes rotatePizza {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 493px;
+    }
+
+    &__title {
+        font-size: 4rem; //64px
+        margin-bottom: 20px;
+        color: inherit;
+    }
+
+    &__description {
+        font-size: 1.25rem; //20px
+        margin-bottom: 80px;
+        color: inherit;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: self-start;
+        height: 100px;
+        padding-inline: 60px;
+        font-size: 1.25rem; //20px
+        font-weight: 700;
+        border-radius: 30px;
+        background-color: var(--hero-button-bg);
+        color: var(--hero-button-color);
+        text-decoration: none;
+        transition: background-color .3s ease;
+        position: relative;
+
+        &:hover {
+            color: var(--hero-button-color-hover);
+            background-color: var(--hero-button-bg-hover);
+        }
+
+        &::after {
+            content: "";
+            background-image: url("../images/hero/bolgarin.svg");
+            width: 125px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: -150px;
+            left: -175px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1) rotate(-45deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.3);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1) rotate(-45deg);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__photo {
+        border: 3px solid #FF7F50;
+    }
+}

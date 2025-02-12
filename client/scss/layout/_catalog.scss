@@ -1,40 +1,53 @@
 .catalog {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: var(--white);
-
-    &__wrapper {
-        background-color: var(--gray);
-    }
-
-    &__row {
+    &__tabs-list {
+        background-color: var(--black);
         display: flex;
         justify-content: space-between;
         padding-top: 50px;
         padding-bottom: 50px;
+        position: relative;
+        z-index: 1;
     }
 
-    &__button {
-        font-size: 1.25rem; //20px
-        border: none;
-        border-radius: 30px;
+    &__tabs-list::before {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 190px;
+        background-color: var(--catalog-bg-tabs);
+        z-index: -1;
+        left: 50%;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__tabs-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         height: 89px;
-        font-weight: 700;
-        padding-inline: 53px;
-        background-color: var(--card-bg-color);
-        cursor: pointer;
+        padding-inline: 50px;
+        background-color: var(--catalog-bg-button);
+        color: var(--catalog-button-color);
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        transition: color .3s ease;
+        gap: 5px;
+
+        &:hover {
+            color: var(--catalog-button-color-hover);
+        }
     }
 
-    &__title {
-        font-size: 2.8125rem;
-        /*45px*/
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    &__grid {
+    &__tab-grid {
+        padding-top: 50px;
+        padding-bottom: 50px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
         gap: 20px;
     }
 }

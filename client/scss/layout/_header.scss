@@ -1,11 +1,17 @@
 .header {
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.5);
+    // background-color: var(--header-bg-color);
 
     &__container {
         display: flex;
         align-items: center;
-        border-bottom: 1px solid var(--black);
-        padding-bottom: 50px;
     }
 
     &__nav {
@@ -23,8 +29,13 @@
     &__nav-link {
         font-size: 1.25rem;
         text-decoration: none;
-        color: var(--black);
+        color: var(--header-link-color);
+        transition: color .3s ease;
+
         /*20px*/
+        &:hover {
+            color: var(--header-link-hover-color);
+        }
     }
 
     &__buttons {
@@ -39,5 +50,17 @@
         border: none;
         background: none;
         padding: 0;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+    }
+
+    &__button svg path {
+        fill: var(--header-bg-cart-button);
+        transition: fill .3s ease;
+    }
+
+    &__button:hover svg path {
+        fill: var(--header-bg-cart-button-hover);
     }
 }

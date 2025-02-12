@@ -1,0 +1,11 @@
+.logo {
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.logo svg path {
+    fill: var(--logo-color);
+}

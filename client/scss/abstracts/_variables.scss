@@ -3,23 +3,51 @@
   --container-max-width: 1200px;
   --container-padding-inline: 15px;
 
+  //all colors
+  --black: #212121;
+  --white: #ffffff;
+  --grey: #ECF0F1;
+  --orange: #FF7F50;
+  --red: #C0392B;
+  --yellow: #f4c075;
+  --green: #A2D9CE;
+  --blue: #3498DB;
+  //body
+  --body-bg: #ffffff;
+  // logo
+  --logo-color: #FF7F50;
+
+  //header
+  --header-bg-color: #ECF0F1;
+  --header-link-color: #000000;
+  --header-link-hover-color: #FF7F50;
+  --header-bg-cart-button: #FF7F50;
+  --header-bg-cart-button-hover: #f4c075;
+  //footer
+  --footer-bg: #212121;
+  //hero
+  --hero-bg: #ffffff;
+  --hero-button-color: #ECF0F1;
+  --hero-button-color-hover: #ffffff;
+  --hero-button-bg: #FF7F50;
+  --hero-button-bg-hover: #f4c075;
+
+  //catalog
+  --catalog-bg-tabs: #FF7F50;
+  --catalog-bg-button: #ffffff;
+  --catalog-button-color: #000000;
+  --catalog-button-color-hover: #FF7F50;
   //------------------------------------
   // card
-  --card-bg-color: #D9D9D9;
+  --card-bg-color: #ffffff;
   --card-title-color: #000000;
   --card-text-color: gray;
   --card-price-color: #000000;
   //
   --card-button-color: #ffffff;
-  --card-button-hover-color: orange;
+  --card-button-color-hover: #ECF0F1;
   //
-  --card-button-bg-color: #7B7676;
-  --card-button-bg-hover-color: blue;
+  --card-button-bg-color: #f4c075;
+  --card-button-bg-color-hover: #FF7F50;
   //-------------------------------------
-
-  //all
-  --bg-color: #D9D9D9;
-  --black: #000000;
-  --gray: #7B7676;
-  --white: #ffffff;
 }
