@@ -1256,6 +1256,7 @@ body.no-scroll {
   cursor: pointer;
   width: 40px;
   height: 40px;
+  position: relative;
 }
 .header__button svg path {
   fill: var(--header-bg-cart-button);
@@ -1263,6 +1264,17 @@ body.no-scroll {
 }
 .header__button:hover svg path {
   fill: var(--header-bg-cart-button-hover);
+}
+.header__button-count {
+  display: block;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  position: absolute;
+  background-color: var(--orange);
 }
 
 .header.open .header__nav {

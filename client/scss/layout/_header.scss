@@ -137,6 +137,7 @@
         cursor: pointer;
         width: 40px;
         height: 40px;
+        position: relative;
     }
 
     &__button svg path {
@@ -146,6 +147,18 @@
 
     &__button:hover svg path {
         fill: var(--header-bg-cart-button-hover);
+    }
+
+    &__button-count {
+        display: block;
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: .875rem;
+        position: absolute;
+        background-color: var(--orange);
     }
 }
 
