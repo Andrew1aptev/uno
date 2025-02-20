@@ -94,7 +94,7 @@
         text-decoration: none;
         transition: background-color .3s ease;
 
-        @include button-hover {
+        @include button-hover(hover, hover) {
             background-color: var(--hero-button-bg-hover);
         }
 

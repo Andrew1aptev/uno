@@ -58,7 +58,7 @@
         border-radius: 30px;
         padding-inline: 15px;
 
-        @include button-hover {
+        @include button-hover(hover, hover) {
             background-color: var(--catalog-bg-button-hover);
             color: var(--catalog-button-color-hover);
         }
