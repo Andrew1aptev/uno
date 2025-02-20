@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .hero {
     display: flex;
     justify-content: center;
@@ -88,11 +90,15 @@
         height: 100px;
         padding-inline: 35px;
         border-radius: 30px;
-        background-color: var(--hero-button-bg);
-        color: inherit;
         font-weight: 700;
         text-decoration: none;
-        transition: background-color .3s ease;
+        @include color-style((background-color: var(--hero-button-bg),
+                color: var(--hero-button-color),
+                transition: all 0.3s ease,
+            ),
+            (background-color: var(--hero-button-bg-hover),
+                color: var(--hero-button-color-hover),
+            ));
 
         @media only screen and (max-width: 1024px) {
             height: 80px;
