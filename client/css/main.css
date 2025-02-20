@@ -1154,6 +1154,7 @@ body.no-scroll {
   height: 40px;
   border: none;
   background: transparent;
+  padding: 0;
 }
 @media only screen and (max-width: 1024px) {
   .header__mobile-button {
@@ -1161,16 +1162,18 @@ body.no-scroll {
   }
 }
 .header__mobile-button span {
+  position: absolute;
   display: block;
-  height: 2px;
-  width: 100%;
+  height: 3px;
+  width: 40px;
   background-color: black;
+  transition: transform 0.3s ease;
 }
 .header__mobile-button span:nth-child(1) {
-  transform: translateY(-15px);
+  transform: translateY(-10px);
 }
 .header__mobile-button span:nth-child(3) {
-  transform: translateY(15px);
+  transform: translateY(10px);
 }
 .header__nav {
   height: 100%;
@@ -1264,6 +1267,18 @@ body.no-scroll {
 
 .header.open .header__nav {
   transform: translateY(100%);
+}
+
+.header.open .header__mobile-button span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__mobile-button span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__mobile-button span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .catalog {
