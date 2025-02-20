@@ -67,7 +67,7 @@
         background-color: var(--card-button-bg-color);
         transition: color .3s ease, background-color .3s ease;
 
-        &:hover {
+        @include button-hover {
             color: var(--card-button-color-hover);
             background-color: var(--card-button-bg-color-hover);
         }

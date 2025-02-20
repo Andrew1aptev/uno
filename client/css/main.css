@@ -29,8 +29,8 @@
   --catalog-bg-tabs: #ECF0F1;
   --catalog-bg-button: #FF7F50;
   --catalog-bg-button-hover: #f4c075;
-  --catalog-button-color: #ECF0F1;
-  --catalog-button-color-hover: #ECF0F1;
+  --catalog-button-color: #ffffff;
+  --catalog-button-color-hover: #ffffff;
   --card-bg-color: #ECF0F1;
   --card-title-color: #000000;
   --card-text-color: gray;
@@ -966,6 +966,8 @@ svg * {
   }
 }
 body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--body-bg);
   font-family: "Inter", sans-serif;
 }
@@ -1291,6 +1293,10 @@ body.no-scroll {
 
 .header.open .header__mobile-button span:nth-child(3) {
   transform: translateY(0) rotate(-45deg);
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .catalog {

@@ -94,6 +94,10 @@
         text-decoration: none;
         transition: background-color .3s ease;
 
+        @include button-hover {
+            background-color: var(--hero-button-bg-hover);
+        }
+
         @media only screen and (max-width: 1024px) {
             height: 80px;
         }
@@ -102,10 +106,6 @@
             align-self: auto;
             height: 60px;
             padding-inline: 25px;
-        }
-
-        &:hover {
-            background-color: var(--hero-button-bg-hover);
         }
     }
 }
