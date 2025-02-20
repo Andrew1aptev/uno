@@ -1267,19 +1267,30 @@ body.no-scroll {
   padding-inline: 12px;
   gap: 24px;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  /* для Internet Explorer и Edge */
+  scrollbar-width: none;
+  /* для Firefox */
+}
+.catalog__tabs-list::-webkit-scrollbar {
+  display: none;
+}
+.catalog__tabs-list::-ms-scrollbar {
+  display: none;
 }
 .catalog__tabs-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 700;
-  gap: 24px;
   height: 60px;
   background-color: var(--catalog-bg-button);
   color: var(--catalog-button-color);
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s ease, background-color 0.3s ease;
-  gap: 24px;
+  gap: 10px;
   border-radius: 30px;
   padding-inline: 15px;
 }
@@ -1326,7 +1337,6 @@ body.no-scroll {
   gap: 30px;
   padding: 50px 50px 43px 50px;
   height: 100%;
-  border-radius: 30px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1409,7 +1419,6 @@ body.no-scroll {
 .swiper {
   width: 100%;
   min-height: 540px;
-  border-radius: 30px;
 }
 @media only screen and (max-width: 600px) {
   .swiper {
