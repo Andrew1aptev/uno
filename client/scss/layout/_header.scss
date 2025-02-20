@@ -24,10 +24,28 @@
         display: none;
         position: relative;
         z-index: 3;
-        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: transparent;
 
         @media only screen and (max-width: 1024px) {
             display: block;
+        }
+
+        & span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: black;
+        }
+
+        & span:nth-child(1) {
+            transform: translateY(-15px);
+        }
+
+        & span:nth-child(3) {
+            transform: translateY(15px);
         }
     }
 
@@ -96,6 +114,7 @@
         }
 
         @media only screen and (max-width: 1024px) {
+            font-size: 2.125rem;
             color: var(--white);
         }
     }
@@ -113,8 +132,8 @@
         background: none;
         padding: 0;
         cursor: pointer;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 
     &__button svg path {
