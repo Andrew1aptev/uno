@@ -2,7 +2,8 @@
   //container
   --container-max-width: 1200px;
   --container-padding-inline: 15px;
-
+  --header-height: 100px;
+  --link-color-hover: #FF7F50;
   //all colors
   --black: #212121;
   --white: #ffffff;
@@ -18,28 +19,29 @@
   --logo-color: #FF7F50;
 
   //header
-  --header-bg-color: #ECF0F1;
+  --header-bg: #E49133;
   --header-link-color: #000000;
   --header-link-hover-color: #FF7F50;
-  --header-bg-cart-button: #FF7F50;
+  --header-bg-cart-button: #000000;
   --header-bg-cart-button-hover: #f4c075;
   //footer
   --footer-bg: #212121;
   //hero
-  --hero-bg: #ffffff;
+  --hero-color: #ffffff;
+  --hero-bg: #ECF0F1;
   --hero-button-color: #ECF0F1;
   --hero-button-color-hover: #ffffff;
   --hero-button-bg: #FF7F50;
   --hero-button-bg-hover: #f4c075;
-
   //catalog
-  --catalog-bg-tabs: #FF7F50;
-  --catalog-bg-button: #ffffff;
-  --catalog-button-color: #000000;
-  --catalog-button-color-hover: #FF7F50;
+  --catalog-bg-tabs: #ECF0F1;
+  --catalog-bg-button: #FF7F50;
+  --catalog-bg-button-hover: #f4c075;
+  --catalog-button-color: #ECF0F1;
+  --catalog-button-color-hover: #ECF0F1;
   //------------------------------------
   // card
-  --card-bg-color: #ffffff;
+  --card-bg-color: #ECF0F1;
   --card-title-color: #000000;
   --card-text-color: gray;
   --card-price-color: #000000;

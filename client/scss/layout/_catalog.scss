@@ -1,45 +1,68 @@
 .catalog {
+    overflow-x: hidden;
+    padding-top: 50px;
+
     &__tabs-list {
-        background-color: var(--black);
-        display: flex;
-        justify-content: space-between;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        background-color: var(--catalog-bg-tabs);
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: stretch;
+        padding-top: 25px;
+        padding-bottom: 25px;
         position: relative;
         z-index: 1;
+        border-radius: 30px;
+        padding-inline: 12px;
+        gap: 24px;
+        overflow: scroll;
     }
 
-    &__tabs-list::before {
-        content: "";
-        position: absolute;
-        width: 100vw;
-        height: 190px;
-        background-color: var(--catalog-bg-tabs);
-        z-index: -1;
-        left: 50%;
-        right: 0;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+    // &__tabs-list::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 100vw;
+    //     height: 110px;
+    //     background-color: var(--catalog-bg-tabs);
+    //     z-index: -1;
+    //     left: 50%;
+    //     right: 0;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    // }
 
     &__tabs-button {
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        height: 89px;
-        padding-inline: 50px;
+        font-weight: 700;
+        gap: 24px;
+        height: 60px;
         background-color: var(--catalog-bg-button);
         color: var(--catalog-button-color);
         text-decoration: none;
-        border-radius: 30px;
-        font-weight: 400;
         text-transform: uppercase;
-        transition: color .3s ease;
-        gap: 5px;
+        transition: color .3s ease, background-color .3s ease;
+        gap: 24px;
+        border-radius: 30px;
+        padding-inline: 15px;
 
         &:hover {
+            background-color: var(--catalog-bg-button-hover);
             color: var(--catalog-button-color-hover);
+        }
+
+        @media only screen and (max-width: 1024px) {
+            font-size: .875rem; //20px
+            height: 50px;
+        }
+
+    }
+
+    &__tabs-icon {
+        width: 40px;
+        height: 40px;
+
+        & path {
+            fill: rgb(255, 255, 255);
         }
     }
 

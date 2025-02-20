@@ -1,112 +1,143 @@
 .hero {
-    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
     padding-bottom: 50px;
-    min-height: 100vh;
+    margin-top: -100px;
     background-color: var(--hero-bg);
     color: #000000;
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    /* calc(100vh - var(--header-height)) */
 
-    &__decoration {
-        background-image: url("../images/hero/pizza.svg");
-        width: 100%;
-        min-height: 500px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        max-width: 500px;
-        /* Анимация */
-        animation: rotatePizza 25s linear infinite;
-        transform-origin: center;
-        /* Точка вращения */
-    }
-
-    @keyframes rotatePizza {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
 
     &__content {
         display: flex;
         flex-direction: column;
-        max-width: 493px;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px 50px 43px 50px;
+        height: 100%;
+        border-radius: 30px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: var(--hero-color);
+        font-size: 1.25rem; //20px
+        backdrop-filter: blur(10px);
+        position: relative;
+        z-index: 2;
+
+        @media only screen and (max-width: 1024px) {
+            font-size: 1rem; //16px
+            padding: 30px 30px 30px 30px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: .875rem; //14px
+        }
+
+        &--1 {
+            background-image: url("../images/hero/slider/slider-bg-1.webp");
+        }
+
+        &--2 {
+            background-image: url("../images/hero/slider/slider-bg-2.webp");
+        }
+
+        &--3 {
+            background-image: url("../images/hero/slider/slider-bg-3.webp");
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backdrop-filter: blur(3px);
+        background: rgba(255, 255, 255, 0.1);
+        z-index: -1;
     }
 
     &__title {
+        font-family: 'Yeseva One', sans-serif;
+        max-width: 500px;
         font-size: 4rem; //64px
-        margin-bottom: 20px;
-        color: inherit;
+        line-height: 1.5;
+
+        @media only screen and (max-width: 1024px) {
+            font-size: 3.1875rem; //51px
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 2rem; //32px
+        }
     }
 
     &__description {
-        font-size: 1.25rem; //20px
-        margin-bottom: 80px;
-        color: inherit;
+        max-width: 400px;
     }
 
     &__button {
         display: flex;
         justify-content: center;
         align-items: center;
-        align-self: self-start;
+        align-self: flex-start;
         height: 100px;
-        padding-inline: 60px;
-        font-size: 1.25rem; //20px
-        font-weight: 700;
+        padding-inline: 35px;
         border-radius: 30px;
         background-color: var(--hero-button-bg);
-        color: var(--hero-button-color);
+        color: inherit;
+        font-weight: 700;
         text-decoration: none;
         transition: background-color .3s ease;
-        position: relative;
 
         &:hover {
-            color: var(--hero-button-color-hover);
             background-color: var(--hero-button-bg-hover);
         }
 
-        &::after {
-            content: "";
-            background-image: url("../images/hero/bolgarin.svg");
-            width: 125px;
-            height: 150px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-            top: -150px;
-            left: -175px;
-            animation: pulse 3s ease-in-out infinite;
+        @media only screen and (max-width: 1024px) {
+            height: 80px;
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1) rotate(-45deg);
-                opacity: 1;
-            }
-
-            50% {
-                transform: scale(1.3);
-                opacity: 0.5;
-            }
-
-            100% {
-                transform: scale(1) rotate(-45deg);
-                opacity: 1;
-            }
+        @media only screen and (max-width: 600px) {
+            align-self: auto;
+            height: 60px;
+            padding-inline: 25px;
         }
     }
+}
 
-    &__photo {
-        border: 3px solid #FF7F50;
+.swiper {
+    width: 100%;
+    min-height: 540px;
+    border-radius: 30px;
+
+    @media only screen and (max-width: 600px) {
+        min-height: 300px;
+    }
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #f4c075;
+    opacity: 1;
+}
+
+/* target all bullets */
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    opacity: 1;
+
+    @media only screen and (max-width: 600px) {
+        width: 5px;
+        height: 5px;
     }
 }
