@@ -13,9 +13,6 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
     spaceBetween: 10,
-    autoplay: {
-        delay: 4000,
-      },
     // autoHeight: true,
     // If we need pagination
     pagination: {
