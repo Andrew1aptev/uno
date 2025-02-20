@@ -94,10 +94,6 @@
         text-decoration: none;
         transition: background-color .3s ease;
 
-        @include button-hover(hover, hover) {
-            background-color: var(--hero-button-bg-hover);
-        }
-
         @media only screen and (max-width: 1024px) {
             height: 80px;
         }

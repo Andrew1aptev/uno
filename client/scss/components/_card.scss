@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .card {
     background-color: var(--card-bg-color);
     display: flex;
@@ -63,13 +65,13 @@
         cursor: pointer;
         height: 50px;
         padding-inline: 27px;
-        color: var(--card-button-color);
-        background-color: var(--card-button-bg-color);
-        transition: color .3s ease, background-color .3s ease;
 
-        @include button-hover(hover, hover) {
-            color: var(--card-button-color-hover);
-            background-color: var(--card-button-bg-color-hover);
-        }
+        @include color-style((background-color: var(--card-button-bg-color),
+                color: var(--card-button-color),
+                transition: all 0.3s ease,
+            ),
+            (background-color: var(--card-button-bg-color-hover),
+                color: var(--card-button-color-hover),
+            ));
     }
 }

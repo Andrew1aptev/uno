@@ -965,6 +965,10 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -1119,13 +1123,21 @@ body.no-scroll {
   cursor: pointer;
   height: 50px;
   padding-inline: 27px;
-  color: var(--card-button-color);
   background-color: var(--card-button-bg-color);
-  transition: color 0.3s ease, background-color 0.3s ease;
+  color: var(--card-button-color);
+  transition: all 0.3s ease;
 }
-.card__button:hover {
-  color: var(--card-button-color-hover);
-  background-color: var(--card-button-bg-color-hover);
+@media (hover: hover) {
+  .card__button:hover:not(:disabled) {
+    background-color: var(--card-button-bg-color-hover);
+    color: var(--card-button-color-hover);
+  }
+}
+@media (hover: none) {
+  .card__button:active:not(:disabled) {
+    background-color: var(--card-button-bg-color-hover);
+    color: var(--card-button-color-hover);
+  }
 }
 
 .header {
@@ -1334,18 +1346,27 @@ body.no-scroll {
   justify-content: center;
   font-weight: 700;
   height: 60px;
-  background-color: var(--catalog-bg-button);
-  color: var(--catalog-button-color);
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s ease, background-color 0.3s ease;
   gap: 10px;
   border-radius: 30px;
   padding-inline: 15px;
+  background-color: var(--catalog-bg-button);
+  color: var(--catalog-button-color);
+  transition: all 0.3s ease;
 }
-.catalog__tabs-button:hover {
-  background-color: var(--catalog-bg-button-hover);
-  color: var(--catalog-button-color-hover);
+@media (hover: hover) {
+  .catalog__tabs-button:hover:not(:disabled) {
+    background-color: var(--catalog-bg-button-hover);
+    color: var(--catalog-button-color-hover);
+  }
+}
+@media (hover: none) {
+  .catalog__tabs-button:active:not(:disabled) {
+    background-color: var(--catalog-bg-button-hover);
+    color: var(--catalog-button-color-hover);
+  }
 }
 @media only screen and (max-width: 1024px) {
   .catalog__tabs-button {
@@ -1461,9 +1482,6 @@ body.no-scroll {
     height: 60px;
     padding-inline: 25px;
   }
-}
-.hero__button:hover {
-  background-color: var(--hero-button-bg-hover);
 }
 
 .swiper {

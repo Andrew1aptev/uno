@@ -1,13 +1,25 @@
-@mixin button-hover {
-    @media (hover: hover) {
-        &:hover {
-            @content;
-        }
-    }
+@mixin color-style($default: (), $hover: ()) {
 
-    @media (hover: none) {
-        &:active {
-            @content;
-        }
-    }
+	// Базовые стили
+	@each $property, $value in $default {
+		#{$property}: $value;
+	}
+
+	// Для устройств с hover поддержкой
+	@media (hover: hover) {
+		&:hover:not(:disabled) {
+			@each $property, $value in $hover {
+				#{$property}: $value;
+			}
+		}
+	}
+
+	// Для тач-устройств
+	@media (hover: none) {
+		&:active:not(:disabled) {
+			@each $property, $value in $hover {
+				#{$property}: $value;
+			}
+		}
+	}
 }

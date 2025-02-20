@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .catalog {
     overflow-x: hidden;
     padding-top: 50px;
@@ -49,19 +51,19 @@
         justify-content: center;
         font-weight: 700;
         height: 60px;
-        background-color: var(--catalog-bg-button);
-        color: var(--catalog-button-color);
         text-decoration: none;
         text-transform: uppercase;
         transition: color .3s ease, background-color .3s ease;
         gap: 10px;
         border-radius: 30px;
         padding-inline: 15px;
-
-        @include button-hover(hover, hover) {
-            background-color: var(--catalog-bg-button-hover);
-            color: var(--catalog-button-color-hover);
-        }
+        @include color-style((background-color: var(--catalog-bg-button),
+                color: var(--catalog-button-color),
+                transition: all 0.3s ease,
+            ),
+            (background-color: var(--catalog-bg-button-hover),
+                color: var(--catalog-button-color-hover),
+            ));
 
         @media only screen and (max-width: 1024px) {
             font-size: .875rem; //20px
