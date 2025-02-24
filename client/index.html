@@ -35,7 +35,7 @@
                 </ul>
             </nav>
             <div class="header__buttons">
-                <a class="header__button" id="button-cart" href="./cart.html">
+                <button class="header__button" id="open-button-modal" type="button">
                     <svg width="50" height="50" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_26_14)">
                             <path
@@ -49,7 +49,7 @@
                         </defs>
                     </svg>
                     <span class="header__button-count">1</span>
-                </a>
+                </button>
             </div>
         </div>
     </header>
@@ -750,6 +750,17 @@
             <div class="footer__copyright">© UNO, 2025</div>
         </div>
     </footer>
+
+    <dialog id="modal" aria-labelledby="modal-title" aria-modal="true">
+        <div class="cart-wrapper">
+            <h1>TITLE</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, animi dicta voluptate aliquam voluptatem
+                quibusdam excepturi vel repellat delectus esse optio dolore iure fugit, qui repudiandae laudantium
+                officia nisi. Dignissimos?
+            </p>
+            <button class="close-button" id="close-button-modal" type="button">Close cart</button>
+        </div>
+    </dialog>
 </body>
 <script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/main.js" type="module"></script>

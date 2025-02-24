@@ -9,6 +9,11 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/*Блокируем скролл, если много контента*/
+.scroll-lock {
+    overflow: hidden;
+}
+
 body.no-scroll {
     overflow: hidden;
 }
